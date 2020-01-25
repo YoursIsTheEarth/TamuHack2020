@@ -20,6 +20,10 @@ bot.on('ready', function (evt) {
 bot.on('message', function (user, userID, channelID, message, evt) {
     // Our bot needs to know if it will execute a command
     // It will listen for messages that will start with `!`
+
+    //J// variables
+    var rand = Math.floor((Math.random() * 20 ) + 1);
+
     if (message.substring(0, 1) == '!') {
         var args = message.substring(1).split(' ');
         var cmd = args[0];
@@ -31,6 +35,12 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 bot.sendMessage({
                     to: channelID,
                     message: 'Pong!'
+                });
+            break;
+            case 'roll':
+                bot.sendMessage({
+                    to: channelID,
+                    message: rand
                 });
             break;
             // Just add any case commands if you want to..
