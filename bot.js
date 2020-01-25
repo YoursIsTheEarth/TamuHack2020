@@ -7,20 +7,29 @@ client.on('ready', () => {
 
 client.on('message', msg => {
     if (msg.content.startsWith('!')) {
-        const cmd = msg.content.substr(1);
-        switch(cmd) {
-            case 'ping':
-                msg.reply('Pong!');
-                break;
-            case 'spam':
-                for (var i = 0; i < 20; i++) {
-                    msg.reply('');
-                }
-                break;
-            default:
-                msg.reply('?');
+        const cmdString = msg.content.substr(1);
+        try {
+            const args = cmdString.split(' ');
+            switch(args[0]) {
+                case 'ping':
+                    msg.reply('Pong!');
+                    break;
+                case 'spam':
+                    for (var i = 0; i < 20; i++) {
+                        msg.reply('');
+                    }
+                    break;
+                case 'roll':
+                    msg.reply('Rolling die...');
+                    break;
+                default:
+                    msg.reply('?');
+            }
+        }
+        catch (err) {
+            console.log(err);
         }
     }
 });
 
-client.login('NjcwNjk1NTA4MzYwMTY3NDU0.XizI4g.6nPcfiGRX06XwsfjhKHvHc3lW48');
+client.login('NjcwNjk1NTA4MzYwMTY3NDU0.XizTvA.GU1GtVIYRsSpm3aCpwvKn47HMRY');
