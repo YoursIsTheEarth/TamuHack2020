@@ -1,8 +1,8 @@
 {
-“name”: “The Dungeoneer”,
-“version”: “1.0.0”,
-“description”: “D&D Helper”,
-“main”: “bot.js”,
-“author”: “J&L”,
-“dependencies”: {}
+"name": "The Dungeoneer",
+"version": "1.0.0",
+"description": "D&D DM Helper",
+"main": "bot.js",
+"author": "J&L",
+"dependencies": {}
 }
