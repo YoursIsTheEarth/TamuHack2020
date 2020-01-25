@@ -1,8 +1,22 @@
 {
-"name": "The Dungeoneer",
-"version": "1.0.0",
-"description": "D&D DM Helper",
-"main": "bot.js",
-"author": "J&L",
-"dependencies": {}
+  "name": "tamuhack2020",
+  "version": "1.0.0",
+  "description": "Dungeons",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YoursIsTheEarth/TamuHack2020.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YoursIsTheEarth/TamuHack2020/issues"
+  },
+  "homepage": "https://github.com/YoursIsTheEarth/TamuHack2020#readme",
+  "dependencies": {
+    "discord.js": "^11.5.1"
+  }
 }
