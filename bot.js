@@ -20,7 +20,13 @@ client.on('message', msg => {
                     }
                     break;
                 case 'roll':
-                    msg.reply('Rolling die...');
+                    try {
+                        msg.channel.send('Rolling die...');
+                    }
+                    catch(err) {
+                        console.log(err);
+                        msg.reply('Something went wrong with command !' + args[0]);
+                    }
                     break;
                 default:
                     msg.reply('?');
@@ -32,4 +38,4 @@ client.on('message', msg => {
     }
 });
 
-client.login('NjcwNjk1NTA4MzYwMTY3NDU0.XizTvA.GU1GtVIYRsSpm3aCpwvKn47HMRY');
+client.login('NjcwNjk1NTA4MzYwMTY3NDU0.XizUCA.N-HHiHeuyGoJtk0LEL0ib23VNe0');
