@@ -11,4 +11,10 @@ client.on('message', msg => {
     }
 });
 
-client.login('NjcwNjk1NTA4MzYwMTY3NDU0.Xiy98w.KThrZXJCdN4ul-RXcto6jmSAavc');
+const token = process.env.DISCORD_TOKEN;
+if (!token) {
+    console.error('Set the DISCORD_TOKEN environment variable before starting the bot.');
+    process.exit(1);
+}
+
+client.login(token);
